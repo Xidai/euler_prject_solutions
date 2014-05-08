@@ -1,5 +1,5 @@
 __author__ = 'Xidai'
-from problem_003_largest_prime_factor.largest_prime_factor import is_prime
+from p_003_largest_prime_factor import is_prime
 
 
 def the_10001th_prime():
@@ -9,7 +9,6 @@ def the_10001th_prime():
         if is_prime(i):
             count += 1
     print i
-
 
 
 if __name__ == "__main__":

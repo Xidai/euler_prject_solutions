@@ -1,4 +1,11 @@
 __author__ = 'Xidai'
+
+"""
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?
+"""
+
 from math import sqrt
 
 
@@ -16,15 +23,13 @@ def is_prime(num):
 
 
 def largest_prime_factor(n):
-    if n % 2 == 0:
-        i = n - 1
-    else:
-        i = n - 2
-    while i >= sqrt(n):
-        if n % i == 0 and (is_prime(n) or is_prime(n / i)):
-            return i
-        i -= 2
-    print "not found"
+    divisor = 2
+    while n > 1:
+        if n % divisor == 0 and is_prime(divisor):
+            n /= divisor
+            divisor -= 1
+        divisor += 1
+    return divisor
 
 
 def cheat(n):
@@ -73,4 +78,4 @@ def cheat3():
 
 
 if __name__ == "__main__":
-    print cheat3()
+    print largest_prime_factor(600851475143)
