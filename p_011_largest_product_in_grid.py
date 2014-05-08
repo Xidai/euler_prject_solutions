@@ -34,7 +34,6 @@ def grid_to_list(input_grid):
 
 def to_int(l):
     return map(lambda row: [int(n) for n in row], l)
-    return l
 
 
 def largest_product_in_gid(input_grid):
